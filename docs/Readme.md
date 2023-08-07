@@ -19,7 +19,9 @@ database pushed to website whenever a new document or a batch of comments are
 added.
 
 This single SQLite3 database will be formed by combining multiple SQLite3
-databases, one from each *draft* of a LPiL document in the collection.
+databases, one from each *draft* of a LPiL document in the collection. These
+individual *draft* databases will be produced by the LPiL-tool as it parses the
+document looking for important structure.
 
 The Glosary definitions will be stored in individual Markdown files (one per
 defintion).
