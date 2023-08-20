@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This bash script uses the current working directory to create a simple
+# script to run the tmgt command anywhere in a user's
+# workspace.
+
+cmdScript=$(pwd)/src/lpilCollector.js
+
+cat << CMD_SCRIPT > $HOME/.local/bin/lpil-collector
+#!/bin/sh
+
+# This shell script was created by the LPiL-Collector tool
+#       './scripts/installEditableLPiLCollectorCommand'
+# script.
+
+exec node $cmdScript \$@
+CMD_SCRIPT
+
+chmod a+x $HOME/.local/bin/lpil-collector
+
+echo ""
+echo "Editable lpil-collector command has been created"
+echo ""
